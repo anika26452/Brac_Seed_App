@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/customernamecode"
+        android:layout_gravity="center"
+        android:text="Customer Name"
+        android:textColor="@color/bracgreend"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"></TextView>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight=".13"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:weightSum="100"
+        android:background="@drawable/square_field"
+        >-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/square_field"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/serial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:text="#SL"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".3"
+            android:text="Product"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/qtyTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:text="QTY"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/priceTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:gravity="center"
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:gravity="center"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/crossTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:visibility="gone"></ImageView>
+
+
+        <!--<TextView
+            android:text="product"
+            android:textColor="@color/bracgreend"
+
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:padding="10sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"></TextView>
+        <TextView
+
+            android:text="UOM"
+            android:textColor="@color/bracgreend"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:padding="10sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"></TextView>
+        <TextView
+
+            android:textColor="@color/bracgreend"
+            android:text="price"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:padding="10sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"></TextView>
+
+        <TextView
+
+            android:textColor="@color/bracgreend"
+            android:text="qty"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:padding="10sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"></TextView>
+
+        <TextView
+
+            android:text="total"
+            android:textColor="@color/bracgreend"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:padding="10sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"></TextView>-->
+
+    </LinearLayout>
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bracgreend"/>-->
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical">
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerView"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_list_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight=".6"
+                    android:layout_width="0dp"
+                    android:text="TOTAL"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:text="100"
+                    android:id="@+id/listQtySum"
+                    android:layout_weight=".3"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/listTotalSum"
+                    android:layout_weight=".3"
+                    android:layout_width="0dp"
+                    android:text="100056"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".10"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="Total Price : " />
+
+        <TextView
+            android:id="@+id/tPrice_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:textSize="12sp"
+            android:gravity="start"
+            android:text="1000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".12"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="Total Price InWords : " />
+
+        <TextView
+            android:id="@+id/tPrice_textView_inwords"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:textSize="12sp"
+            android:gravity="start"
+            android:text="Hundred" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="100"
+        android:visibility="gone"
+
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="35"
+            android:textSize="14sp"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:textColor="#6a7170"
+            android:textColorHint="#6a7170"
+            android:textColorLink="#6a7170"
+            android:text="Special Discount"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="65"
+            android:gravity="center"
+            android:inputType="number"
+            android:id="@+id/discount_editText"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:textColor="@android:color/black"
+            android:textColorHint="#6a7170"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="100"
+        android:gravity="end"
+        android:visibility="gone"
+        >
+
+        <CheckBox
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="64"
+            android:layout_height="wrap_content"
+            android:text="is percentage"
+            android:textColor="#6a7170"
+            android:id="@+id/discount_checkbox"
+
+            android:buttonTint="@android:color/holo_blue_bright"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/addmore_button"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/bracgreend"
+            android:textColor="@color/white"
+            android:onClick="callAddMoreProducts"
+            android:layout_height="wrap_content"
+            android:text="Add More Products" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="35"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="Grand Total"
+            android:textColor="@color/black"
+            android:textColorHint="#6a7170"
+            android:textColorLink="#6a7170"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="65"
+            android:gravity="center"
+            android:enabled="false"
+            android:id="@+id/grandtotal"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/black"
+            android:textColorHint="#6a7170"
+            /></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="100"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="35"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="Order Ref.No."
+            android:textColor="@color/black"
+            android:textColorHint="#6a7170"
+            android:textColorLink="#6a7170"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="65"
+            android:gravity="center"
+            android:id="@+id/reference_editText"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/black"
+            android:textColorHint="#6a7170"
+            /></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="100"
+
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="35"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="Remarks"
+            android:textColor="@color/black"
+            android:textColorHint="#6a7170"
+            android:textColorLink="#6a7170"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="65"
+            android:gravity="center"
+            android:id="@+id/Remarks_editText"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/black"
+            android:textColorHint="#6a7170"
+            /></LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/send_order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight=".5"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="sendtoservertemp"
+            android:gravity="center"
+            android:text="Send To Server"
+            android:textAllCaps="false" />
+    </LinearLayout>-->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0"
+        android:padding="0dp">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight=".4"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="callCancel"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <!--<TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".1">
+        </TextView>-->
+
+        <!--<Button
+            android:backgroundTint="@color/bracgreen"
+            android:id="@+id/confirm_button"
+            android:layout_weight=".4"
+            android:textColor="#fff"
+            android:onClick="callConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Confirm" />-->
+        <Button
+            android:id="@+id/send_order_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".4"
+            android:backgroundTint="@color/darkgreen"
+            android:gravity="center"
+            android:onClick="SendToServerTemp"
+            android:text="Save Order"
+            android:textAllCaps="false" />
+    </TableRow>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LogOut"
+        android:onClick="callCancelLogOut"
+        android:backgroundTint="@color/red"
+        android:id="@+id/CancelLogOut"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

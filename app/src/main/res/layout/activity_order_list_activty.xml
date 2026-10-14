@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/customernamecode"
+            android:layout_gravity="center"
+            android:text="Customer Name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"></TextView>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/bracgreen"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/serial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="7"
+                android:text="#SL"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"></TextView>
+
+
+
+            <TextView
+                android:textSize="10sp"
+                android:id="@+id/nameTV"
+                android:textColor="@color/white"
+                android:text="Product"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="17"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/qtyTV"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:text="QTY" />
+
+            <TextView
+                android:id="@+id/priceTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="12"
+                android:gravity="center"
+                android:text="Unit Price"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="14"
+                android:gravity="center"
+                android:text="Total"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="8"
+                android:gravity="center"
+                android:text="Bonus"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="16"
+                android:gravity="center"
+                android:text="Comm."
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="16"
+                android:gravity="center"
+                android:text="Total with Comm."
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            tools:context=".Activities.OrderListActivity_json">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/order_list_recyclerview"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="100"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:text="TOTAL"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="11sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:text="0"
+                    android:id="@+id/listQtySum"
+                    android:layout_weight="21"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/listTotalSum"
+                    android:layout_weight="15"
+                    android:layout_width="0dp"
+                    android:text="0"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/TotalbonusSum"
+                    android:layout_weight="11"
+                    android:layout_width="0dp"
+                    android:text="0"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/listCommSum"
+                    android:layout_weight="15"
+                    android:layout_width="0dp"
+                    android:text="0"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/totalwithcommSum"
+                    android:layout_weight="18"
+                    android:layout_width="0dp"
+                    android:text="0"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight=".10"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="start"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="Total Price : " />
+
+            <TextView
+                android:id="@+id/tPrice_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:textSize="12sp"
+                android:gravity="start"
+                android:text="1000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"
+                android:gravity="start"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="Total InWords : " />
+
+            <TextView
+                android:id="@+id/tPrice_textView_inwords"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+                android:textSize="12sp"
+                android:gravity="start"
+                android:text="Hundred" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/addmore_button"
+                android:layout_width="wrap_content"
+                app:backgroundTint="@color/bracgreend"
+                android:textColor="@color/white"
+                android:onClick="callAddMoreProducts"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_button"
+                android:textAllCaps="false"
+                android:text="Add More Products" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:text="Remarks"
+                android:textColor="#6a7170"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <EditText
+                android:hint="Enter remarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/Remarks_editText"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170"
+                /></LinearLayout>
+
+        <TableRow
+            android:padding="8dp"
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp" >
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                app:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:onClick="callCancel"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Back"
+                android:background="@drawable/rectangle_button"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/send_order_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                app:backgroundTint="@color/darkgreen"
+                android:onClick="SendToServerTemp"
+                android:gravity="center"
+                android:text="Save Order"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rectangle_button"
+                android:textAllCaps="false" />
+        </TableRow>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:onClick="callCancelLogOut"
+            app:backgroundTint="@color/red"
+            android:id="@+id/CancelLogOut"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangle_button"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+
+</ScrollView>

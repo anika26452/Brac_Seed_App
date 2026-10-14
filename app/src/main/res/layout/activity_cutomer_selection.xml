@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".Activity.Customer_Selection_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:text="Order Date"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+            <Button
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="Date"
+                android:textColor="#FF000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+
+            >
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Sales Type"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/salesType_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/org_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:text="Organization"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/org_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:enabled="false"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout3"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:text="Warehouse"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/branch_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:enabled="false"
+                android:padding="5dp"
+                android:spinnerMode="dropdown"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout4"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/location_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:text="Territory"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/location_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout5"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="100">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Customer Group"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/customer_group_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout6"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Customer Search"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/search_customer_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:gravity="center"
+                android:hint="Search"
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout7"
+            android:layout_marginTop="5dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <CheckBox
+                android:id="@+id/search_code_checkbox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_editText"
+                android:layout_weight="64"
+                android:buttonTint="@android:color/holo_green_light"
+                android:gravity="center"
+                android:text="Search By Code"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        <!--android:layout_below="@+id/date_editText"-->
+        <LinearLayout
+            android:id="@+id/linear_layout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout8"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+
+            >
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Customer"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/customer_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout9"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/search_customerAddress_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:gravity="center"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout11"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Phone No"
+                android:textColor="#6a7170"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/search_customerPhoneNo_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:gravity="center"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/linear_layout12"
+            android:id="@+id/linear_layout13"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Price List"
+                android:id="@+id/pricelist_text"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:id="@+id/pricelist_spinner"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_layout14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout13"
+            android:layout_marginTop="5dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <CheckBox
+                android:id="@+id/cash_checkbox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_editText"
+                android:layout_weight="64"
+                android:buttonTint="@android:color/holo_green_light"
+                android:gravity="center"
+                android:text="Cash Discount"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!--end 2021-11-15-->
+        <!--<Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout12"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="@color/bracgreend"
+
+            android:onClick="gotoProductActivity"
+            android:text="go to order panel"
+            android:textColor="@color/white" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_layout12"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout20"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="10dp"
+            android:layout_weight=".4"
+            android:background="@drawable/rectangle_button"
+            app:backgroundTint="@color/colorPrimary"
+            android:onClick="callCancel"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/brac_ash" />
+
+        <Button
+            android:id="@+id/orgSelect_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".4"
+            android:background="@drawable/rectangle_button"
+            app:backgroundTint="@color/darkgreen"
+            android:onClick="gotoProductActivity"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_layout20"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout21"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/callCancelDeleteOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="10dp"
+            android:layout_weight=".4"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="callCancelDeleteOrder"
+            android:text="Cancel Order"
+            android:textAllCaps="false"
+            android:textColor="@color/brac_ash"
+            app:backgroundTint="#982704" />
+
+        <Button
+            android:id="@+id/CancelLogOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".4"
+            android:background="@drawable/rectangle_button"
+            app:backgroundTint="@color/red"
+            android:onClick="callCancelLogOut"
+            android:text="LogOut"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

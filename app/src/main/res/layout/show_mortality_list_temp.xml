@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingVertical="5dp"
+        android:id="@+id/orderListRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:text="a"
+            android:id="@+id/pcode"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="35"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:text="b"
+            android:id="@+id/pname"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="35"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:text="c"
+            android:id="@+id/qty"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:layout_marginRight="2dp"
+            android:gravity="end">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/product_delete_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_weight="10"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:paddingRight="15dp"
+            android:src="@drawable/close">
+
+        </ImageView>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/bluegrey" />
+
+</LinearLayout>

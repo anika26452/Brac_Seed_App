@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bluegrey">#C9CACA</color>
+    <color name="brac_blue">#0b79bf</color>
+    <color name="brac_ash">#f3f3f4</color>
+    <color name="brac_black">#1a1618</color>
+    <color name="darkgreen">#2f5712</color>
+    <color name="bracgreen">#97c740</color>
+    <color name="bracgreend">#789f33</color>
+    <color name="dark_ash"> #737373</color>
+    <color name="red">#f51414</color>
+    <color name="grey">#81858a</color>
+    <color name="orange">#FFA500</color>
+    <color name="colorPrimary">#B43104</color>
+    <color name="colorPrimaryDark">#641e16</color>
+    <color name="redcancel">#C80505</color>
+    <color name="lightgrey">#E9E9E9</color>
+    <color name="spinner_text">#000000</color>
+    <color name="spinner_background">#FFFFFF</color>
+</resources>

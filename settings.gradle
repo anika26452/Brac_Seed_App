@@ -1,0 +1,3 @@
+rootProject.name = "Brac_Seed_App"
+include ':app'
+include ':searchablespinnerlibrary'

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".Activity.Sales_Order_Activity1">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:textColor="@color/bracgreend"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:text="Order Panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/customernamecode"
+            android:layout_gravity="center"
+            android:text="Customer Name"
+            android:textColor="@color/bracgreend"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date_editText"
+            android:weightSum="100"
+            >
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:text="Product Category"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:id="@+id/product_category_spinner"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date_editText"
+            android:weightSum="100"
+            >
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:text="Product"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:id="@+id/product_spinner"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date_editText"
+            android:weightSum="100"
+            >
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:text="Cost Center"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:text=""
+                android:textColor="@color/black"
+                android:id="@+id/CostCenter"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date_editText"
+            android:weightSum="100"
+            >
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:text="UOM"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:text="PIECE"
+                android:textColor="@color/black"
+                android:id="@+id/uom"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout2"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout3"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:id="@+id/TextView_quantity"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:layout_height="wrap_content"
+                android:text="Order Qty Packet"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+            <EditText
+                android:id="@+id/editText_qtyinpacket"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:maxLength="9"/>
+            <TextView
+                android:id="@+id/TextView_unit"
+                android:layout_width="0dp"
+                android:layout_weight="15"
+                android:layout_height="wrap_content"
+                android:text="Piece"
+                android:visibility="invisible"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout2"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:layout_height="wrap_content"
+                android:text="Order Qty"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+            <EditText
+                android:id="@+id/editText_quantityordered"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:maxLength="9"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="15"
+                android:layout_height="wrap_content"
+                android:text="Piece"
+                android:visibility="invisible"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout3"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout5"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:id="@+id/TextView_qty"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:layout_height="wrap_content"
+                android:text="Order Qty in KG"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+            <EditText
+                android:id="@+id/editText_qtyinkg"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:maxLength="9"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout5"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout4"
+            android:layout_marginTop="10dp"
+            android:layout_weight="100"
+            >
+
+            <TextView
+                android:id="@+id/TextView_price"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+            <EditText
+                android:id="@+id/editText_price"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                />
+
+            <TextView
+                android:id="@+id/TextView_Currency"
+                android:layout_width="0dp"
+                android:layout_weight="15"
+                android:layout_height="wrap_content"
+                android:text="Taka"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:text="Total"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:enabled="false"
+                android:id="@+id/total_editText"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170"
+                />
+        </LinearLayout>
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editText_quantity"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout1"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="20dp">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:backgroundTint="#6f7d73"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:id="@+id/button_Add"
+                android:layout_marginRight="10dp"/>
+
+
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/button_View"
+                android:textColor="@color/brac_ash"
+                android:onClick="OnViewButtonPress"
+                android:backgroundTint="@color/bracgreend"
+                android:text="View Order" />
+
+        </LinearLayout>-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Added Products List"
+            android:onClick="callShowAddProduct"
+            app:backgroundTint="@color/bracgreend"
+            android:id="@+id/show_button1"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangle_button"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+
+                android:layout_marginRight="10dp"
+                android:id="@+id/cancel_button"
+                android:textColor="@color/brac_ash"
+                android:onClick="callCancel"
+                app:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/rectangle_button"
+                android:textAllCaps="false"
+                android:text="Back" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                app:backgroundTint="@color/darkgreen"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:id="@+id/button_Add"
+                android:onClick="callConfirmNew"
+                android:background="@drawable/rectangle_button"
+                android:textAllCaps="false"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:onClick="callCancelLogOut"
+            app:backgroundTint="@color/red"
+            android:id="@+id/CancelLogOut"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_button"
+
+            />
+
+        <TextView
+            android:layout_height="20dp"
+            android:layout_width="0dp"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+</ScrollView>

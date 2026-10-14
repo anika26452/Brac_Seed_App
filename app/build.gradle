@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 34
+   // buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.sysnova.brac_seed_app"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "4.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'com.sysnova.brac_seed_app'
+}
+
+dependencies {
+    implementation'commons-logging:commons-logging-api:1.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('libs/apache-httpcomponents-httpcore.jar')
+    implementation files('libs/ftp4j-1.7.jar')
+    implementation files('libs/gson-2.2.2.jar')
+    implementation files('libs/httpclient-4.2.3.jar')
+    implementation files('libs/java-json.jar')
+    implementation files('libs/picasso-2.5.2.jar')
+    implementation files('libs/postgresql-9.1-901.jdbc3.jar')
+    implementation project(path: ':searchablespinnerlibrary')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+}

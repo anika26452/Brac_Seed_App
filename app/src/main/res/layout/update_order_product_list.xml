@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:weightSum="100"
+    >
+
+    <TextView
+        android:id="@+id/sl_id_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="SL#"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/product_name_id_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:text="product Name"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        >
+    </TextView>
+    <EditText
+        android:id="@+id/qty_id_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:text="quantity"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:enabled="false"
+        >
+    </EditText>
+    <TextView
+        android:id="@+id/uom_id_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:text="UOM"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/edit_id_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:text="EDIT"
+        android:textColor="@android:color/holo_red_light"
+        android:gravity="center"
+        android:background="@android:color/holo_green_dark"
+        >
+    </TextView>
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sysnova.brac_seed_app.Activity.Home">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/header_textView"
+            android:text="MENU"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/bracgreend"
+            android:gravity="center_horizontal" />
+
+
+        <Button
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/DBsync_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="DBsyncActivity"
+            android:padding="10dp"
+            android:text="DB Sync"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textCursorDrawable="@color/bracgreen"
+            app:backgroundTint="#789f33"
+            android:textColor="@color/white"/>
+
+
+        <Button
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/order_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="orderActivity"
+            android:padding="10dp"
+            android:text="Sales Order"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:backgroundTint="#789f33" />
+
+        <Button
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/vieworder"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_button"
+            app:backgroundTint="@color/bracgreend"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:onClick="DBsyncView"
+            android:text="View Order"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+
+
+        <Button
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/approve_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="OrderListForApprovalActivity"
+            android:padding="10dp"
+            android:text="Approve Sales Order"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:backgroundTint="#789f33" />
+
+        <Button
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/payment_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="DealerPaymentActivity"
+            android:padding="10dp"
+            android:text="Dealer Payment"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:backgroundTint="#789f33" />
+
+        <Button
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/paymentvw_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="DealerPaymentViewActivity"
+            android:padding="10dp"
+            android:text="View Dealer Payment"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:backgroundTint="#789f33" />
+
+        <Button
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/exit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/bracgreend"
+            android:onClick="exitApp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Exit App"
+            android:textAllCaps="false"
+            app:backgroundTint="#789f33" />
+
+        <Button
+            android:textColor="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blank_button"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:visibility="invisible"
+            android:background="@drawable/rectangle_button"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

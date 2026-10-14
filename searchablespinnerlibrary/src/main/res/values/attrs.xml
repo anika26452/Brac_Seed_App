@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SearchableSpinner">
+        <attr name="hintText" format="string"/>
+    </declare-styleable>
+    <!--<style name="Theme.UserDialog" parent="@android:style/Theme.AppCompat.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:itemBackground">@android:color/white</item>
+        <item name="android:tint">@android:color/black</item>
+        <item name="textColorAlertDialogListItem">@android:color/black</item>
+        <item name="android:editTextColor">@android:color/black</item>
+        <item name="android:focusable">false</item>
+    </style>-->
+</resources>
